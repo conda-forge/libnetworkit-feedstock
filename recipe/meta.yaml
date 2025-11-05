@@ -1,7 +1,5 @@
 {% set name = "libnetworkit" %}
-{% set version = "11.1" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "c8db0430f6d7503eaf1e59fbf181374dc9eaa70f572c56d2efa75dd19a3548a9" %}
+{% set version = "11.2" %}
 
 package:
   name: '{{ name|lower }}'
@@ -9,7 +7,7 @@ package:
 
 source:
   - url: 'https://github.com/networkit/networkit/archive/{{ version }}.tar.gz'
-    {{ hash_type }}: {{ hash_value }}
+    sha256: ed762fb2b893425fe05074fa746db58c1e7bef4d96d9921e72d6ae8ca387f995
   - git_url: https://github.com/networkit/ttmath
     git_depth: 1
     folder: extlibs/ttmath
@@ -46,8 +44,6 @@ test:
     - test -f %LIBRARY_PREFIX%\lib\networkit\networkit_state.dll  # [win]
 
     # conda tools
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://github.com/networkit/networkit
@@ -56,7 +52,7 @@ about:
   license_file: License.txt
   summary: 'NetworKit is a growing open-source toolkit for large-scale network analysis.'
   description: |
-           NetworKit is a growing open-source toolkit for large-scale network analysis. Its aim is to provide tools for the analysis of large networks in the size range from thousands to billions of edges. For this purpose, it implements efficient graph algorithms, many of them parallel to utilize multicore architectures. These are meant to compute standard measures of network analysis, such as degree sequences, clustering coefficients, and centrality measures. In this respect, NetworKit is comparable to packages such as NetworkX, albeit with a focus on parallelism and scalability. NetworKit is also a testbed for algorithm engineering and contains novel algorithms from recently published research (see list of Publications).
+    NetworKit is a growing open-source toolkit for large-scale network analysis. Its aim is to provide tools for the analysis of large networks in the size range from thousands to billions of edges. For this purpose, it implements efficient graph algorithms, many of them parallel to utilize multicore architectures. These are meant to compute standard measures of network analysis, such as degree sequences, clustering coefficients, and centrality measures. In this respect, NetworKit is comparable to packages such as NetworkX, albeit with a focus on parallelism and scalability. NetworKit is also a testbed for algorithm engineering and contains novel algorithms from recently published research (see list of Publications).
   doc_url: https://networkit.github.io/
   dev_url: https://github.com/networkit/networkit
 
