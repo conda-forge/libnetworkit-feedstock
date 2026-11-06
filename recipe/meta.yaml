@@ -7,7 +7,7 @@ package:
 
 source:
   - url: 'https://github.com/networkit/networkit/archive/{{ version }}.tar.gz'
-    sha256: 966c99f1e5412965b6946f00e6969b665c035b8f3273b97865b71bfc893d06c3
+    sha256: 5aa5813110438270e9bb83c73f597943c4c5bedd5a9634fdaf5f2052a0053ba4
   - git_url: https://github.com/networkit/ttmath
     git_depth: 1
     folder: extlibs/ttmath
