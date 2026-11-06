@@ -11,6 +11,9 @@ source:
   - git_url: https://github.com/networkit/ttmath
     git_depth: 1
     folder: extlibs/ttmath
+  - git_url: https://github.com/hu-macsy/dhb
+    git_depth: 1
+    folder: extlibs/dhb
 
 build:
   number: 0
